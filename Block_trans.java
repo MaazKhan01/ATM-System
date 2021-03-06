@@ -48,11 +48,12 @@ public class Block_trans extends JFrame implements ActionListener{
 		setContentPane(pane);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		//connection	
+		//connecting with database
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
 			cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/atm--db", "root","");
 		}catch(ClassNotFoundException e)  {
+			//GDB driver
  			System.err.println("Failed to load driver");
  	
  		}catch(SQLException e){
